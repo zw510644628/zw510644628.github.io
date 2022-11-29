@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Wei Zheng (toxic)"
+  name             : "Wei Zheng"
   avatar           : "profile.png"
   bio              : "Master student at Xidian University, Applied Cryptography, SE, PPFL"
   location         : "Xi'an, China"
