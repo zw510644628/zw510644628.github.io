@@ -13,11 +13,11 @@ author_profile: true
 
 # Useful Links
 
-**Ranking List:** [CCF ranking list 2022](https://isabelleliu630.github.io/files/list.pdf)
+**Ranking List:** [CCF ranking list 2019](https://isabelleliu630.github.io/files/list.pdf)
 
 # Publication Lists
 
-1. **\[2022 TSC (B)\]** Ranked Keyword Search over Encrypted Cloud Data Through Machine Learning Method  
+1. **\[2022 TSC (A)\]** Ranked Keyword Search over Encrypted Cloud Data Through Machine Learning Method  
     Yinbin Miao, **Wei Zheng**, Xiaohua Jia, Ximeng Liu, Kim-Kwang Raymond Choo, Robert Deng
     IEEE Transactions on Services Computing     
     [\[Paper\]](https://ieeexplore.ieee.org/document/9669027)
