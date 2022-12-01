@@ -19,7 +19,7 @@ author_profile: true
 # Publication Lists
 
 1. **\[2022 TSC (A)\]** Ranked Keyword Search over Encrypted Cloud Data Through Machine Learning Method  
-    Yinbin Miao, **Wei Zheng**, Xiaohua Jia, Ximeng Liu, Kim-Kwang Raymond Choo, Robert Deng
+    Yinbin Miao, **Wei Zheng**, Xiaohua Jia, Ximeng Liu, Kim-Kwang Raymond Choo, Robert Deng 
     IEEE Transactions on Services Computing     
     [\[Paper\]](https://ieeexplore.ieee.org/document/9669027)
 3. **\[2020 GLOBECOM (C)\]** Flexible and Privacy-preserving Framework for Decentralized Collaborative Learning  
