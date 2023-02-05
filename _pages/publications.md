@@ -15,7 +15,7 @@ author_profile: true
 
 **Ranking List:** [CCF ranking list 2019](https://zw510644628.github.io//files/list2019.pdf)
 
-​						  [CCF ranking list 2022](https://zw510644628.github.io//files/list2022.pdf)
+​				  [CCF ranking list 2022](https://zw510644628.github.io//files/list2022.pdf)
 
 # Publication Lists
 
