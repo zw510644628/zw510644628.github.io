@@ -21,7 +21,7 @@ author_profile: true
 
 1. **\[2023 TDSC (A)\]** VerifyTL: Secure and Verifiable Collaborative Transfer Learning  
     Zhuoran Ma, Jianfeng Ma, Yinbin Miao, Ximeng Liu, **Wei Zheng**, Kim-Kwang Raymond Choo, Robert Deng  
-    IEEE Transactions on Dependable and Secure Computing ( Early Access ) 
+    IEEE Transactions on Dependable and Secure Computing (Early Access) 
     [\[Paper\]](https://ieeexplore.ieee.org/document/10032613)
 1. **\[2022 TSC (A)\]** Ranked Keyword Search over Encrypted Cloud Data Through Machine Learning Method  
     Yinbin Miao, **Wei Zheng**, Xiaohua Jia, Ximeng Liu, Kim-Kwang Raymond Choo, Robert Deng
