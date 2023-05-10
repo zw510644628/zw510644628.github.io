@@ -13,6 +13,7 @@ Wei Zheng is a master student in [Xidian University (XDU)](https://en.xidian.edu
 
 News!
 ======
+- \[May. 2023\] Our one paper was accepted by IEEE Internet of Things Journal!
 - \[Jan. 2023\] I have been awarded Tencent Scholarship!
 - \[Oct. 2022\] I have been awarded a national scholarship for 2022!
 - \[Sep. 2022\] We have jointly won the third prize at the national level in the Network Technology Challenge of the 2022 China University Computer Contest!
