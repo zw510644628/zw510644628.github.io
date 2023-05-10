@@ -17,6 +17,10 @@ author_profile: true
 
 # Publication Lists
 
+1. **\[2023 IoTJ (SCI I区)\]** VerFHS: Verifiable Image Retrieval on Forward Privacy in Blockchain-enabled IoT  
+    Hao Chen, Xixiang Lv, **Wei Zheng**, and Deyu Lin   
+    IEEE Internet of Things Journal   
+    [\[Paper\]](https://ieeexplore.ieee.org/document/10121757)
 1. **\[2023 TDSC (A)\]** VerifyTL: Secure and Verifiable Collaborative Transfer Learning  
     Zhuoran Ma, Jianfeng Ma, Yinbin Miao, Ximeng Liu, **Wei Zheng**, Kim-Kwang Raymond Choo, Robert Deng  
     IEEE Transactions on Dependable and Secure Computing  
