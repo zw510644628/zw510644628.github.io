@@ -13,6 +13,7 @@ Wei Zheng is a master student in [Xidian University (XDU)](https://en.xidian.edu
 
 News!
 ======
+- \[Jan. 2024\] I was invited to be a reviewer for IEEE TIFS!
 - \[May. 2023\] Our one paper was accepted by IEEE TIFS!
 - \[May. 2023\] Our one paper was accepted by IEEE IoTJ!
 - \[Jan. 2023\] I have been awarded Tencent Scholarship!
