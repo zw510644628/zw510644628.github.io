@@ -1,4 +1,4 @@
-# LLM 推理优化
+# [LLM 推理优化](https://github.com/ninehills/llm-inference-benchmark/blob/main/LLM%E6%8E%A8%E7%90%86%E4%BC%98%E5%8C%96.md)
 
 ## 理解 LLM 推理过程
 
