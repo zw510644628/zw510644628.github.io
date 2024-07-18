@@ -9,7 +9,8 @@
 
 重复这两个步骤直到生成 EOS token 或达到用户设定的停止条件（stop token 或最大 token 数）。
 
-![Alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/1d32b58c-19ae-4624-960b-ee4734ab69ef)
+
 
 让我们以 Llama2-7B（4096 序列长度，float16精度）为例，计算一下 batch_size = 1的理想推理速度。
 
@@ -42,7 +43,8 @@ LLM推理的过程是一个自回归的过程，也就是说前i次的token会�
 
 在这个过程中Transformer会执行自注意力操作，为此需要给当前序列中的每个项目（无论是prompt/context还是生成的token）提取键值（kv）向量。这些向量存储在一个矩阵中，通常被称为kv cache。kv cache是为了避免每次采样token时重新计算键值向量。
 
-![Alt text](image.png)
+![image](https://github.com/user-attachments/assets/de274d8f-3284-4d66-814a-c87c2d4e1f0f)
+
 
 对最大长度是 4096 的 LLaMa2-7B fp16 模型，服务端每创建 1 个并发，都需要大约 2GB 显存保存 kv_cache，即便是 A100 80G，能并发服务的用户也非常有限。
 
@@ -57,7 +59,8 @@ LLM推理的过程是一个自回归的过程，也就是说前i次的token会�
 
 MBU 定义为（实际内存带宽）/（峰值内存带宽），而（实际内存带宽） = （总模型参数大小 + KV 缓存大小） / TPOT。举个例子，假如 7B fp16 模型的 TPOT 是 14ms，那么它就需要在 14ms 内把 14GB 参数从显存加载到计算单元，也就是 1TB/s 的带宽使用量。假设显卡的峰值带宽为 2TB/s，那么 MBU = 0.5，即显存带宽利用率是 50%。
 
-![Alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/4d2e7ea5-d108-4073-9ee7-8d2ee011d5ef)
+
 
 ## LLM 推理的优化方法
 
@@ -69,7 +72,8 @@ MBU 定义为（实际内存带宽）/（峰值内存带宽），而（实际内
 
 常见的两个框架是 FasterTransformer（TensorRT） 和 Deepseed Inference，都可以通过转换的方式，融合 Transformer 的特定层。
 
-![Alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/8c2d3989-88d4-4d5f-884b-087c571fbb2a)
+
 
 图：Deepspeed 层融合示意图
 
@@ -83,7 +87,8 @@ MBU 定义为（实际内存带宽）/（峰值内存带宽），而（实际内
 
 以目前比较流行的 [AWQ](https://arxiv.org/pdf/2306.00978.pdf) 量化为例，其原理如下：
 
-![Alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/cef69235-4f5b-40b0-a1fe-6758548af5f5)
+
 
 相比于传统的直接量化方法，通过激活感知，如果保留了 1% 的显著权重不量化，可以大幅降低量化带来的模型性能损失。但是硬件对混合精度支持不好，AWQ 使用了逐通道缩放因子来控制不同通道的缩放因子，对显著权重进行保护。
 
@@ -97,7 +102,8 @@ MBU 定义为（实际内存带宽）/（峰值内存带宽），而（实际内
 
 具体参考 [FlashAttention介绍](https://zhuanlan.zhihu.com/p/638468472)。
 
-![Alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/bf5d5db6-22ba-44e9-adc9-0f2ab98cb2e3)
+
 
 FlashAttention 就是通过利用 GPU 硬件中的特殊设计，针对全局内存和共享存储的 I/O 速 度的不同，尽可能的避免 HBM 中读取或写入注意力矩阵。FlashAttention 目标是尽可能高效地使 用 SRAM 来加快计算速度，避免从全局内存中读取和写入注意力矩阵。
 
@@ -113,7 +119,8 @@ PagedAttention 是 vLLM 的核心技术，在生产环境中一般都有 4x 以�
 
 与传统的注意力算法不同，PagedAttention 允许在不连续的内存空间中存储连续的键和值。具体来说，PagedAttention 将每个序列的 KV 缓存划分为多个块，每个块包含固定数量的令牌的键和值。在注意力计算过程中，PagedAttention 内核会有效地识别和获取这些块。由于块不需要在内存中是连续的，因此我们可以像在操作系统的虚拟内存中一样以更灵活的方式管理键和值：可以将块视为页面，将 token 视为字节，将序列视为进程。序列的连续逻辑块通过块表映射到非连续的物理块。随着新 token 的生成，物理区块会按需分配。
 
-![annimation1.gif](annimation1.gif)
+![image](https://github.com/user-attachments/assets/912895f4-64cc-42db-b98b-c96e9fd294d8)
+
 
 #### 4.2 KV-Cache 压缩
 
@@ -127,7 +134,8 @@ MQA，GQA等。一般都需要在模型架构中采用，或者通过训练后�
 
 并行化可以有效利用多个设备进行推理，从而提升吞吐，降低延迟。
 
-![Alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/cef9bfd9-4346-4420-b5f3-87fadd6bd6d1)
+
 
 [src](https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices)
 
@@ -138,7 +146,8 @@ MQA，GQA等。一般都需要在模型架构中采用，或者通过训练后�
 - 静态批处理 (Static Batching)：在推理前，将多个请求合并为一个大的请求，然后一次性推理。这种方式可以提高吞吐量，但是需要所有请求都完成后才能返回结果，所以一般不会应用。
 - 动态/持续批处理（Continuous Batching）：持续批处理是一种特殊的动态批处理，它可以在序列结束后，继续接受新的序列。从而在保证延迟的情况下，提高吞吐量。
 
-![PersistentBatchInference](infer.gif)
+![image](https://github.com/user-attachments/assets/ac69d1cb-1753-4a2f-acdb-8a5be6d22731)
+
 
 ## 大模型推理后端和推理框架
 
