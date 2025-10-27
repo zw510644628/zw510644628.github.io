@@ -15,6 +15,8 @@ His research interests include RFID, applied cryptography, privacy-preserving Fe
 
 News!
 ======
+- \[Oct. 2025\] I was invited to be a PC for IEEE MSN 2025!
+- \[Jul. 2025\] Our one paper was accepted by USENIX NSDI'26!
 - \[Jan. 2024\] I was invited to be a reviewer for IEEE TIFS!
 - \[Aug. 2023\] Our one paper was accepted by IEEE Globecom2023!
 - \[May. 2023\] Our one paper was accepted by IEEE TIFS!
