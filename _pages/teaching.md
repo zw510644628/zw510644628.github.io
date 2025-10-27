@@ -11,3 +11,7 @@ author_profile: true
 ## Book editorship
 
 [2021-2022] xx
+
+## Service
+
+1. TPC of IEEE MSN 2025
