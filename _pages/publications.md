@@ -20,7 +20,7 @@ author_profile: true
 1. **\[2026 NSDI (A)\]** Decoding RSSI Compression in RFID: Dynamic RCS Modeling and Tag-Intrinsic Power Metrics for Reliable Backscatter Networks  
     Jia Liu, Yifei Ma, Xingyu Chen, Haipeng Dai, He Huang, Zihao Lin, **Wei Zheng**, Junzhao Du, Guihai Chen  
     2026 USENIX Symposium on Networked Systems Design and Implementation   
-    [\[Paper\]](https://ieeexplore.ieee.org/document/10437587)
+    [\[Paper\]](https://www.usenix.org/conference/nsdi26/presentation/liu-jia)
 2. **\[2023 GLOBECOM (C)\]** AFL: Attention-Based Byzantine-Robust Federated Learning with Vector Filter  
     Hao Chen, Xixiang Lv, **Wei Zheng**  
     2023 IEEE Global Communications Conference, 595-600    
